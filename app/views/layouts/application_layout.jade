@@ -1,13 +1,12 @@
 html(lang='en')
     head
         title 首页
-        link(rel='stylesheet' href='../../../bower_components/bootstrap/dist/css/bootstrap-theme.css')
-        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
-
-        script(type='text/javascript' src='/bower_components/bootstrap/dist/js/bootstrap.js')
+        !=stylesheetLinkTag('bootstrap')
+        !=javascriptIncludeTag('jquery','bootstrap')
     body
+
         div
-            nav.navbar.navbar-default(role='navigation')
+            nav.navbar.navbar-inverse(role='navigation')
                div.container-fluid
                    div.navbar-header
                        button.navbar-toggle.collapse(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1')
@@ -16,42 +15,29 @@ html(lang='en')
                            span.icon-bar
                            span.icon-bar
                            span.icon-bar
-                       a.navbar-brand(href='#')
-                           | Brand
+                       a.navbar-brand(href='#') Brand
                    div.collapse.navbar-collapse(id='bs-example-navbar-collapse-1')
                        ul.nav.navbar-nav
                            li.active
-                               a(href='#')
-                                   | link
+                               a(href='#') link
                            li
-                               a(href='#')
-                                   | link
+                               a(href='#') link
                            li.dropdown
-                               a.dropdown-toggle(href='#' data-toggle='dropdown')
-                                   | Dropdown
+                               a.dropdown-toggle(href='#' data-toggle='dropdown') Dropdown
                                    span.caret
                                ul.dropdown-menu(role='menu')
                                    li
-                                       a(href='#')
-                                           | Action
+                                       a(href='#') Action
                                    li
-                                       a(href='#')
-                                           | Another action
+                                       a(href='#') Another action
                                    li
-                                       a(href='#')
-                                           | Something else here
+                                       a(href='#') Something else here
                                    li.divider
                                    li
-                                       a(href='#')
-                                           | Separated link
+                                       a(href='#') Separated link
                                    li.divider
                                    li
-                                       a(href='#')
-                                           | One more separated link
-                       form.navbar-form.navbar-left(role='search')
-                           div.form-group
-                               input.form-control(type='text' placeholder='Search')
-                           button.btn.btn-default(type='submit') Submit
+                                       a(href='#') One more separated link
                        ul.nav.navbar-nav.navbar-right
                            li
                                a(href='#') Link
