@@ -1,7 +1,7 @@
 html(lang='en')
     head
         title 首页
-        !=stylesheetLinkTag('bootstrap')
+        !=stylesheetLinkTag('bootstrap','style','footer-navbar')
         !=javascriptIncludeTag('jquery','bootstrap')
     body
 
@@ -38,19 +38,30 @@ html(lang='en')
                                    li.divider
                                    li
                                        a(href='#') One more separated link
-                       ul.nav.navbar-nav.navbar-right
-                           li
-                               a(href='#') Link
-                           li.dropdown
-                               a.dropdown-toggle(href='#' data-toggle='dropdown') DropDown
-                                   span.caret
-                               ul.dropdown-menu(role='menu')
-                                   li
-                                       a(href='#') Action
-                                   li
-                                       a(href='#') Another action
-                                   li
-                                       a(href='#') Something else here
-                                   li.divider
-                                   li
-                                       a(href='#') Separated link
+
+                       form.navbar-form.navbar-right(role="search")
+                           div.form-group
+                               input.form-control(type="text" placeholder="Search")
+                               button.btn.btn-info(type="submit") Submit
+                       //ul.nav.navbar-nav.navbar-right
+                       //    li
+                       //        a(href='#') Link
+                       //    li.dropdown
+                       //        a.dropdown-toggle(href='#' data-toggle='dropdown') DropDown
+                       //            span.caret
+                       //        ul.dropdown-menu(role='menu')
+                       //            li
+                       //                a(href='#') Action
+                       //            li
+                       //                a(href='#') Another action
+                       //            li
+                       //                a(href='#') Something else here
+                       //            li.divider
+                       //            li
+                       //                a(href='#') Separated link
+
+
+        footer.footer
+            div.container
+                p.text-muted
+                  | copytype
