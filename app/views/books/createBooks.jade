@@ -1,3 +1,4 @@
+!=javascriptIncludeTag('books')
 div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
   ul.breadcrumb
     li
@@ -9,17 +10,17 @@ div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
     li.active
       a(href='#') Edit book
 
-  form(role='form')
+  form(name="myForm" role='form' ng-app="createBookModule" ng-controller="createBookCtl" ng-submit="submit()")
     div.form-group.col-sm-6.col-md-4.col-sm-offset-3
       label(for='bookId') book id
-      input.form-control(type='text' id='bookId' placeholder='Enter id')
+      input.form-control(type='text' name="bookId" ng-model="myForm.bookId" id='bookId' placeholder='Enter id')
     div.form-group.col-sm-6.col-md-4.col-sm-offset-3
       label(for='bookTitle') book titlebookDescription
-      input.form-control(type='text' id='bookTitle' placeholder='Enter title')
+      input.form-control(type='text' name="bookTitle" ng-model="myForm.bookTitle" id='bookTitle' placeholder='Enter title')
     div.form-group.col-sm-6.col-md-4.col-sm-offset-3
       label(for='bookDescription') book description
-      input.form-control(type='text' id='bookDescription' placeholder='Enter description')
+      input.form-control(type='text' name="bookDescription" ng-model="myForm.bookDescription" id='bookDescription' placeholder='Enter description')
     div.form-group.col-sm-6.col-md-4.col-sm-offset-3
       label(for='bookISBN') book ISBN
-      input.form-control(type='text' id='bookISBN' placeholder='Enter ISBN')
-    button.col-sm-6.col-md-4.col-sm-offset-3.btn.btn-info(type='submit' ) Submit
+      input.form-control(type='text' name="bookISBN" ng-model="myForm.bookISBN" id='bookISBN' placeholder='Enter ISBN')
+    button.col-sm-6.col-md-4.col-sm-offset-3.btn.btn-info(type='submit' ng-disabled="") Submit
