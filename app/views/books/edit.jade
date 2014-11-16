@@ -1,0 +1,22 @@
+ul.breadcrumb
+      li
+        a(href='/') Home
+        span.divider /
+      li
+        != linkTo('books', pathTo.books())
+        span.divider /
+      li.active
+        a(href='#') Edit book
+
+.page-header
+  h1 Edit book
+
+- var form = formFor(book, {action: pathTo.book(book), method: 'PUT', id: "book_form", class: 'form-horizontal'});
+
+!= form.begin()
+include _form
+.form-actions
+  != form.submit('<i class="icon-ok icon-white"></i> Update book', {class: 'btn btn-primary'})
+  span= ' or '
+  != linkTo('Cancel', pathTo.book(book), {class: 'btn'})
+!= form.end()

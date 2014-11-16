@@ -6,8 +6,17 @@
 #  property 'activated', Boolean, default: false
 #
 
-Post = describe 'Post', ->
+#Post = describe 'Post', ->
+#    property 'title', String
+#    property 'content', String
+#    set 'restPath', pathTo.posts
+
+Book = describe 'Book', ->
+    property 'id', String
     property 'title', String
-    property 'content', String
-    set 'restPath', pathTo.posts
+    property 'description', String
+    property 'ISBN', String
+    property 'createdAt', Date
+    property 'modifiedAt', Date
+    set 'restPath', pathTo.books
 

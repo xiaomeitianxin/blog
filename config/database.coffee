@@ -1,9 +1,21 @@
 module.exports = 
   development:
-    driver: "memory"
+    driver: "mysql"
+    host: "127.0.0.1"
+    username: "root"
+    password: "123456"
+    database: "compound_test"
 
   test:
-    driver: "memory"
+    driver: "mysql"
+    host: "127.0.01"
+    username: "root"
+    password: "123456"
+    database: "compound_test"
 
   production:
-    driver: "memory"
+    driver: "mysql"
+    host: "127.0.01"
+    username: "root"
+    password: "123456"
+    database: "compound_test"

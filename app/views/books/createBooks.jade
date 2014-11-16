@@ -1,0 +1,25 @@
+div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+  ul.breadcrumb
+    li
+      a(href='/') Home
+      span.divider /
+    li
+      != linkTo('books', pathTo.books())
+      span.divider /
+    li.active
+      a(href='#') Edit book
+
+  form(role='form')
+    div.form-group.col-sm-6.col-md-4.col-sm-offset-3
+      label(for='bookId') book id
+      input.form-control(type='text' id='bookId' placeholder='Enter id')
+    div.form-group.col-sm-6.col-md-4.col-sm-offset-3
+      label(for='bookTitle') book titlebookDescription
+      input.form-control(type='text' id='bookTitle' placeholder='Enter title')
+    div.form-group.col-sm-6.col-md-4.col-sm-offset-3
+      label(for='bookDescription') book description
+      input.form-control(type='text' id='bookDescription' placeholder='Enter description')
+    div.form-group.col-sm-6.col-md-4.col-sm-offset-3
+      label(for='bookISBN') book ISBN
+      input.form-control(type='text' id='bookISBN' placeholder='Enter ISBN')
+    button.col-sm-6.col-md-4.col-sm-offset-3.btn.btn-info(type='submit' ) Submit
