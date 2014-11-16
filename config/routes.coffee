@@ -11,3 +11,4 @@ exports.routes = (map)->
   map.get 'man', 'man#init'
 
   map.get 'books', 'books#createBooks'
+  map.post 'createBookValue.:format?', 'books#createBookValue'

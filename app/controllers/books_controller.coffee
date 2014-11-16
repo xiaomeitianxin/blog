@@ -93,5 +93,24 @@ load 'application'
 #        send "'" + path_to.books + "'"
 
 action 'createBooks', ->
-
   render()
+
+action 'createBookValue', ->
+  console.log params
+  Data = req.body
+#  Data =
+#    id: '29'
+#    title: 'beauty and beast'
+#    description: 'nice'
+#    ISBN: '124354565'
+
+#  console.log 'Data',Data
+  Book.create Data,(error,data) ->
+    respondTo (format) ->
+        format.json ->
+          if error
+            send code: 500, error: error
+          else
+            send code: 200
+#        format.html =>
+#          redirect 'logina'
